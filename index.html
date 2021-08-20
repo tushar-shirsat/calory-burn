@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main_panel">
+            <div class="main_panle_box">
+                <div class="main_panel_date">
+                    <span class="main_panel__date__text">Today</span>
+                    <span class="main_panel__date__percent">92%</span>
+                </div>
+                <div class="main_panel__graph">
+                    <svg  viewBox="0 0 42 42" class="donut main_panel__graph__circle">
+                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#130f40"></circle>
+                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#a29bfe" stroke-width="3"></circle>
+                      
+                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fd79a8" stroke-width="2" stroke-dasharray="60 100" stroke-dashoffset="0"></circle>
+                      </svg>
+                    <div class="main_panel__grapgh__text">
+                        <span class="remaining">
+                            Remaining
+                        </span>
+                        <span class="precentage totalCal__remaining">2300</span>
+                        <span class="cal">kcal</span>
+                    </div>
+                </div>
+                <div class="main_panel__result">
+                    <div class="mainn_panel__result__food">
+                        <div class="main_panel__result__food_cal">
+                            + 150 cal
+                        </div>
+                        <div class="main_panel__result__food_bar">
+    
+                        </div>
+                    </div>
+                    <div class="main_panel__retult__exercise">
+                        <div class="main_panel__result__exercise_cal">
+                            - 150 cal
+                        </div>
+                        <div class="main_panel__result__exercise_bar">
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider__close">
+                <div class="slider__close__btn" id="sliderCloseBtn">&larr;</div>
+            </div>
+
+            <div class="showForm close">
+                <img src="https://images.unsplash.com/photo-1615653633551-25dd80d2765a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fGZvb2QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                 alt="showForm_img"
+                 class="showForm_img">
+
+                 <form action="" class="form">
+                     <div class="showForm__container">
+                         <select class="showForm__type">
+                             <option value="add" class="food" selected="">Food</option>
+                             <option value="burn" class="run">Excrecise</option>
+                         </select>
+                     </div>
+                     <div class="showForm__discription">
+                         <input type="text" class="showForm__discription__input" placeholder="Add Description" name="description">
+                     </div>
+                     <div class="showForm__add">
+                         <div class="showForm__add_input" style="display: flex; justify-content: space-around; align-items: center;margin-bottom: 2rem;">
+                             <input type="number" class="qauntity" placeholder="???">
+                             <input type="number" class="showForm__add_value showForm__add_calories" placeholder="Calories">
+                         </div>
+                         <div class="showForm_add_btn"><i class="fas fa-check"></i></div>
+                     </div>
+                 </form>
+            </div>
+
+
+            <div class="exercise_slider close">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGd5bSUyMGdpcmx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    class="food_container__img"
+                    alt="gym_img">
+                <div class="slider__content exercise__slider">
+                    <!-- <div class="food_container__foods running_container__name" id="burn_0">
+                        <div class="food_container__foods__name running_container__name">
+                            Running
+                        </div>
+                        <div class="food_container__food__calBalance running_calBalance">
+                            Calories Burned
+                            <span class="food_container__foods__cal running__calBalance__cel">-370Cal</span>
+                            <div class="food_container__food__bar running__calBalance__bar"></div>
+                        </div>
+                        <div class="food_container__foods___delete running_container__delete">
+                            <button class="btn_deleteItem"><i class="far fa-times-circle"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="food_slider close">
+                <img src="https://images.unsplash.com/photo-1598515211932-b130a728a769?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGZvb2QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    class="food_container__img"
+                    alt="gym_img">
+                <div class="slider__content food__slider">
+                    <!-- <div class="food_container__foods" id="add_0">
+                        <div class="food_container__foods__name">
+                            bolognese spaghetti
+                        </div>
+                        <div class="food_container__food__calBalance">
+                            Calories Balance
+                            <span class="food_container__foods__cal">+266Cal</span>
+                            <div class="food_container__food__bar"></div>
+                        </div>
+                        <div class="food_container__foods___delete">
+                            <button class="btn_deleteItem"><i class="far fa-times-circle"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <div class="addBtn" id="addBtn">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <div class="calAddBtns">
+                    <div class="food_calAdd" id="food_calAdd">
+                        <i class="fab fa-apple"></i>
+                        <p class="name">+ Food</p>
+                        <!-- <div class="circle"></div> -->
+                    </div>
+                    <div class="exercise_calAdd" id="exercise_calAdd">
+                        <i class="fas fa-fire"></i>
+                        <p class="name">- Excrecise</p>
+                        <!-- <div class="circle"></div> -->
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./js/ui.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

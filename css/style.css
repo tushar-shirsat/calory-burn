@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --clr : #fff;
+    --bg-clr: #130f40;
+    --main-bg: #fbc531
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg);
+    display: grid;
+    place-items: center;
+}
+
+.container .main_panel{
+    width: 40vw;
+    height: 95vh;
+    border-radius: 1rem;
+    position: relative;
+    background-color: var(--bg-clr);
+    box-shadow: 0 1rem 2rem -0.6rem rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.main_panle_box{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main_panel_date{
+    text-align: center;
+    color: var(--clr);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.main_panel__graph{
+    position: relative !important;
+}
+
+
+.main_panel__graph__circle{
+    transform: rotate(270deg);
+    display: flex;
+    margin: 0 auto;
+    width: 25rem;
+    height: 25rem;
+    transition: all ease-in;
+}
+
+
+.main_panel__grapgh__text{
+    position: absolute !important;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.remaining{
+    color: var(--clr);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    
+}
+
+.totalCal__remaining{
+    color: var(--clr);
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.cal{
+    font-size: 3rem;
+    text-align: center;
+    font-size: 500;
+    color: var(--clr);
+}
+
+.main_panel__result{
+    color: var(--clr);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.main_panel__result__food_cal,.main_panel__result__exercise_cal{
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.main_panel__result__food_bar,.main_panel__result__exercise_bar{
+    width: 7rem;
+    background-color: var(--clr);
+    height: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.main_panel__result__food_bar::before, .main_panel__result__exercise_bar::before{
+    content: "";
+    width: 20%;
+    background-color: var(--main-bg);
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.name{
+    font-size: 1.2rem;
+    color: #dfe6e9;
+    text-align: center;
+    
+}
+
+.slider__close__btn{
+    background-color: var(--bg-clr);
+    position: absolute;
+    padding: 0.5rem;
+    padding-top: 0.4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 5%;
+    left: 5%;
+    color: var(--clr);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem ;
+    z-index: 33;
+}
+
+.slider__close__btn:hover{
+    border: 1px solid var(--clr);
+    outline: none;
+}
+
+
+.footer{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--clr);
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.5rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    box-shadow: 0px -2rem 2rem -0.6rem rgba(0,0,0,0.3);
+    padding: 1rem;
+    z-index: 3;
+}
+
+.addBtn{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-plus-circle{
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--bg-clr);
+    filter: drop-shadow(0rem 0.5rem 1rem #000000);
+    
+}
+
+.calAddBtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.food_calAdd,.exercise_calAdd{
+    width: 10rem;
+    font-size: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fa-apple{
+    color: #dfe6e9;
+    /* filter: drop-shadow(0rem 0.5rem 1rem #000000); */
+}
+
+.fa-fire{
+    color: #f7b731;
+    /* filter: drop-shadow(0rem 0.5rem 1rem #000000); */
+}
+
+
+
+.showForm{
+    background-color: var(--clr);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+}
+
+
+
+.showForm_img,.food_container__img{
+    width: 100%;
+    height: 40vh;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: var(--clr);
+}
+
+.form{
+    width: 100%;
+    height: 45vh;
+    background-color: var(--clr);
+}
+
+.showForm__type{
+    background-color: #3B3B98;
+    width: 50%;
+    text-align-last:center;
+    -webkit-appearance: none;
+    color: var(--clr);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem;
+    display: block;
+    margin: 1rem auto;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 2rem -0.3rem rgba(0,0,0,0.3);
+}
+
+.showForm__discription{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.showForm__discription__input{
+    width: 100%;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    box-shadow: 0 1rem 2rem -0.6rem rgba(0,0,0,0.3);
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qauntity{
+    width: 5rem;
+    height:5rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    background-color: var(--clr);
+    border: none;
+    outline: none;
+    box-shadow: 0 1rem 2rem -0.6rem rgba(0,0,0,0.3);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.showForm__add_calories{
+    width: 10rem;
+    height: 5rem;
+    border: none;
+    font-size: 1.4rem;
+    background-color: var(--clr);
+    outline: none;
+    box-shadow: 0 1rem 2rem -0.6rem rgba(0,0,0,0.3);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.showForm_add_btn{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.fa-check{
+    padding: 0.5rem;
+    background-color: var(--bg-clr);
+    color: #32ff7e;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: drop-shadow(0rem 0.5rem 1rem #000000);
+}
+
+.exercise_slider,.food_slider{
+    height: 95vh;
+    background-color: var(--clr);
+    border-radius: 1rem;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    animation: slider 2s ease-in-out;
+}
+
+.slider__content{
+    height: 40vh;
+    background-color: var(--clr);
+    overflow-y: auto;
+}
+
+.food_container__foods{
+    width: 90%;
+    margin: auto;
+    height: 15rem;
+    background-color: var(--clr);
+    box-shadow: 0 1rem 2rem -0.6rem rgba(0,0,0,0.3);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.4s ease-in 0.3s;
+}
+
+.food_container__foods__name{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid lightgray;
+}
+
+.food_container__food__calBalance{
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    color: #596275;
+}
+
+.food_container__foods__cal{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: #000;
+}
+
+.food_container__food__bar{
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.food_container__food__bar::before{
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    background-color: #fd79a8;
+}
+
+.btn_deleteItem{
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #e15f41;
+    margin-top: 1rem;
+    margin-left: 0;
+    display: none;
+    transition: all 0.4s ease-in ;
+}
+
+.food_container__foods:hover .btn_deleteItem{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.ani{
+    animation: slider 2s ease-in-out !important;
+}
+
+
+@keyframes slider{
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0;
+    }
+}
+
+
+.close {
+    display: none;
+}
+
+
+.circle{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #2ecc71;
+    margin: auto;
+    animation: noti 1s ease-in-out infinite;
+}
+
+@keyframes noti{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
